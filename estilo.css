@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+
+input {
+    background-color: rgba(0, 0, 255, 0.473);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding: rgba(0, 0, 255, 0.473);
+    border: 5px;
+}
