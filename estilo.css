@@ -10,3 +10,11 @@ input {
     padding: rgba(0, 0, 255, 0.473);
     border: 5px;
 }
+
+input{
+    margin: 10px 20px;
+}
+
+fieldset{
+    
+}
