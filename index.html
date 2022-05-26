@@ -13,6 +13,7 @@
     <script type="text/javascript" src="tabuada.js"></script>
     <script type="text/javascript" src="mediapar.js"></script>
     <script type="text/javascript" src="temperatura.js"></script>
+    <script type="text/javascript" src="temperatura.js"></script>
 </head>
 <body>
     <h2>Calcular IMC</h2>
@@ -44,6 +45,18 @@
         <input type="button" value="Converter" onclick="ConverterTemperatura();">
         <input type="button" value="Limpar" onclick="limparDados();">
         
+    </fieldset>
+
+    <h2>Cálculo de Combustível</h2>
+    <fieldset>
+        <label for="TempViagem">Tempo Gasto (em Horas):</label>
+        <input type="number" id="TempViagem">
+
+        <label for="VelMed">Velocidade Média (em Km/h):</label>
+        <input type="number" id="VelMed">
+
+        <input type="button" value="Calcular" onclick="CalculoCombustivel();">
+
     </fieldset>
 
 </body>
