@@ -26,7 +26,7 @@ function ConverterTemperatura(){
 
 }
 
-function limparDados(){
+function limparDadosTemperatura(){
     document.getElementById("Fahrenheit").value = "";
     document.getElementById("Centigrados").value = "";
 }

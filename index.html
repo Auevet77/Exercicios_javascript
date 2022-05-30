@@ -13,7 +13,7 @@
     <script type="text/javascript" src="tabuada.js"></script>
     <script type="text/javascript" src="mediapar.js"></script>
     <script type="text/javascript" src="temperatura.js"></script>
-    <script type="text/javascript" src="temperatura.js"></script>
+    <script type="text/javascript" src="calculocombustivel.js"></script>
 </head>
 <body>
     <h2>Calcular IMC</h2>
@@ -43,7 +43,7 @@
         <input type="number" id="Fahrenheit">
         
         <input type="button" value="Converter" onclick="ConverterTemperatura();">
-        <input type="button" value="Limpar" onclick="limparDados();">
+        <input type="button" value="Limpar" onclick="limparDadosTemperatura();">
         
     </fieldset>
 
@@ -56,6 +56,15 @@
         <input type="number" id="VelMed">
 
         <input type="button" value="Calcular" onclick="CalculoCombustivel();">
+        
+        <label for="Distancia">Distância:</label>
+        <input type="text" id="Distancia">
+
+        <label for="LitrosUsados">Litros usados:</label>
+        <input type="text" id="LitrosUsados">
+
+        <input type="button" value="Limpar" onclick="limparDadosCombustivel();">
+
 
     </fieldset>
 
