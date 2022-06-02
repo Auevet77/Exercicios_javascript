@@ -6,25 +6,60 @@ let erro = "";
     }
 
     if(document.getElementById("Telefone").value.trim() ==""){
-        erro += "- O campo telefone é obrigatório!\n"
+        erro += "- O campo telefone é obrigatório!\n";
     }
 
     if(document.getElementById("Email").value.trim() ==""){
-        erro += "- O campo Email é obrigatório!\n"
+        erro += "- O campo Email é obrigatório!\n";
     }
     else if(validateEmail(document.getElementById("Email").value) == false){
-        erro += "- O e-mail digitado não é válido!\n"
+        erro += "- O e-mail digitado não é válido!\n";
     }
 
     if(document.getElementById("Cpf").value.trim() ==""){
-        erro += "- O campo CPF é obrigatório!\n"
+        erro += "- O campo CPF é obrigatório!\n";
     }
 
     else if(validarCPF(document.getElementById("Cpf").value) == false){
-        erro += "- O CPF digitado é inválido!\n"
+        erro += "- O CPF digitado é inválido!\n";
     }
 
-    if (erro != ""){
+	if (document.getElementById("Bairro").selectedIndex == 0){
+		erro += "- O bairro é obrigatório!\n";
+	}
+
+	let opcoes = document.getElementsByName("FormaContato");
+	let selecionados = 0;
+	for (let i=0; i<opcoes.length; i++){
+		if(opcoes[i].checked){
+			selecionados += 1;
+			break;
+		}
+	}
+
+	if (selecionados == 0){
+		erro += "- O campo Forma de Contato é obrigatório!\n";
+	}
+
+	opcoes = document.getElementsByName("Servico");
+	selecionados = 0;
+	for (i=0; i<opcoes.length; i++){
+		if(selecionados < 2){
+			if(opcoes[i].checked){
+				selecionados += 1;
+			}
+		}else{
+			break;
+		}
+	}
+	console.log(selecionados)
+
+	if (selecionados != 2){
+		erro += "- Pelo menos 2 Serviços de Interesse devem ser selecionados!\n";
+	}
+
+
+	if (erro != ""){
         alert("ATENÇÃO!\n\n" + erro);
         return false;
     }
