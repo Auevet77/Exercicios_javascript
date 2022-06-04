@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mask.js"></script>
-    <script type="text/javascript" src="js/validacao.js"></script>
+    <link rel="stylesheet" href="js/pickadate.js-3.6.2/lib/themes/default.css">
+    <link rel="stylesheet" href="js/pickadate.js-3.6.2/lib/themes/default.date.css">
     <title>Contato</title>
 
 </head>
@@ -28,6 +27,12 @@
         <label for="Cpf">CPF</label><br>
         <input type="text" class="cpf" name="Cpf" id="Cpf">
         <br>
+
+        <label for="Placa">Placa do Carro</label><br>
+        <input type="text" class="license_plate" name="Placa" id="Placa"><br>
+
+        <label for="Data">Data de nascimento</label><br>
+        <input type="" class="datepicker" name="Data" id="Data"><br>
 
         <label for="Bairro">Bairro</label><br>
         <select name="Bairro" id="Bairro">
@@ -67,5 +72,12 @@
         <input type="button" name="BtnEnviar" id="BtnEnviar" value="Enviar" onclick="ValidarFormulario();">
     </form>
     
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/picker.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/picker.date.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/translations/pt_BR.js"></script>
+    <script type="text/javascript" src="js/validacao.js"></script>
+
 </body>
 </html>

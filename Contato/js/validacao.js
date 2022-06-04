@@ -52,7 +52,6 @@ let erro = "";
 			break;
 		}
 	}
-	console.log(selecionados)
 
 	if (selecionados != 2){
 		erro += "- Pelo menos 2 Serviços de Interesse devem ser selecionados!\n";
@@ -117,6 +116,7 @@ $(document).ready(function(){
 	$('.cep').mask('00000-000');
 	$('.phone').mask('0000-0000');
 	$('.phone_with_ddd').mask('(00) 0000-0000');
+	$('.license_plate').mask('SSS-0A00');
 	$('.phone_us').mask('(000) 000-0000');
 	$('.mixed').mask('AAA 000-S0S');
 	$('.cpf').mask('000.000.000-00', {reverse: false});
@@ -145,3 +145,5 @@ $(document).ready(function(){
 	  });
 	$('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
   });
+
+  $('.datepicker').pickadate();
