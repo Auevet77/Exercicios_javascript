@@ -2,30 +2,30 @@ function ValidarFormulario(){
 let erro = "";
 
     if(document.getElementById("Nome").value.trim() == ""){
-        erro = "- O campo nome é obrigatório!\n"
+        erro = "- O campo nome é obrigatório!<br>"
     }
 
     if(document.getElementById("Telefone").value.trim() ==""){
-        erro += "- O campo telefone é obrigatório!\n";
+        erro += "- O campo telefone é obrigatório!<br>";
     }
 
     if(document.getElementById("Email").value.trim() ==""){
-        erro += "- O campo Email é obrigatório!\n";
+        erro += "- O campo Email é obrigatório!<br>";
     }
     else if(validateEmail(document.getElementById("Email").value) == false){
-        erro += "- O e-mail digitado não é válido!\n";
+        erro += "- O e-mail digitado não é válido!<br>";
     }
 
     if(document.getElementById("Cpf").value.trim() ==""){
-        erro += "- O campo CPF é obrigatório!\n";
+        erro += "- O campo CPF é obrigatório!<br>";
     }
 
     else if(validarCPF(document.getElementById("Cpf").value) == false){
-        erro += "- O CPF digitado é inválido!\n";
+        erro += "- O CPF digitado é inválido!<br>";
     }
 
 	if (document.getElementById("Bairro").selectedIndex == 0){
-		erro += "- O bairro é obrigatório!\n";
+		erro += "- O bairro é obrigatório!<br>";
 	}
 
 	let opcoes = document.getElementsByName("FormaContato");
@@ -38,7 +38,7 @@ let erro = "";
 	}
 
 	if (selecionados == 0){
-		erro += "- O campo Forma de Contato é obrigatório!\n";
+		erro += "- O campo Forma de Contato é obrigatório!<br>";
 	}
 
 	opcoes = document.getElementsByName("Servico");
@@ -59,7 +59,13 @@ let erro = "";
 
 
 	if (erro != ""){
-        alert("ATENÇÃO!\n\n" + erro);
+		//coloca o conteúdo na div erro
+        $('#erro').html("ATENÇÃO!<br><br>" + erro);
+		//exibe o modal
+		$('#erro').modal({
+			fadeDuration: 1000
+		});
+
         return false;
     }
     else{
